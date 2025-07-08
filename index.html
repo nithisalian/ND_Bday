@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Navin!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ADD8E6; /* Baby blue */
+    }
+
+    nav {
+      background-color: #001F54; /* Navy blue */
+      display: flex;
+      padding: 1rem;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 2rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      width: 200px;
+      margin: 1rem;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .message {
+      display: none;
+      margin-top: 1rem;
+      background-color: #f0f8ff;
+      padding: 0.5rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    button {
+      background-color: #001F54;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 2rem;
+      color: #001F54;
+    }
+    #home {
+      display: none;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .gallery-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    @media screen and (max-width: 600px) {
+      .gallery-img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    #nithi.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#nithi .card {
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+.nithi-message {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #001F54;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.nithi-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.gallery-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.video-card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video-card {
+  width: 200px !important;
+  height: 300px !important;
+  padding-top: 30px !important;
+  border-radius: 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  position: relative !important;
+  background: white;
+  border-radius: 10px;
+  width: 200px;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+    }
+
+
+.reveal-btn {
+  background-color: #001F54;
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  position: absolute;
+  top: 15px;
+}
+
+.reveal-btn:hover {
+  transform: scale(1.1);
+}
+
+.video-wrapper {
+  display: none;
+  margin-top: 60px; /* enough space for button */
+  width: 90%;
+}
+
+.video-wrapper.show {
+  display: block;
+}
+
+.video-wrapper video {
+  width: 100%;
+  border-radius: 12px;
+}
+.video-card,
+.card {
+  width: 200px !important;
+}
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('family')">Family</a>
+    <a href="#" onclick="showPage('friends')">Friends</a>
+    <a href="#" onclick="showPage('nithi')">Nithi</a>
+  </nav>
+
+  <h1> Happy 20th Birthday Navin!!! </h1>
+  <div id="home" class="container" style="display: flex;">
+    <img src="pictures/IMG_0111.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/IMG_0145.jpeg" alt="Photo 2" class="gallery-img">
+    <img src="pictures/D32C774D-282F-47D5-91F0-03F0B1912A9B.JPG" alt="Photo 3" class="gallery-img">
+    <img src="pictures/IMG_0542.png" alt="Photo 4" class="gallery-img">
+    <img src="pictures/IMG_0597.png" alt="Photo 5" class="gallery-img">
+    <img src="pictures/IMG_0655.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_0725.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_1103.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_1595.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_1726.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_2075.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_2385.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_2495.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_2905.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_3408.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_3805.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_4121.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_4465.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_4486.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_4525.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_4630.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_4755.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_4945.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_4976.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_5168.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_5136.JPG" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_5206.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_5209.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_5298.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_5992.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_6038.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_7178.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_6067.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_6285.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_7180.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_7311.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_7373.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_8242.png" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_8547.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_8864.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_9456.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_9458.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_9739.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/IMG_5931.jpeg" alt="photo 6" class="gallery-img">
+    <img src="pictures/IMG_6949.jpeg" alt="photo 6" class="gallery-img">
+
+    <!-- Add more images as needed -->
+  </div>
+
+  <!-- FAMILY SECTION -->
+  <div id="family" class="container">
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">To my beautiful son on his birthday - July 9, 2005, the day you came into my life and it was a beautiful day. I’m very blessed to have a wonderful son like you. I love you with all my heart and I’m very proud of you. Take care of yourself. Keep up the good work, hard work always pays off. You have a good heart. I know I can always depend on you. I have done my job when my son is very decent, loving, disciplined, and respectful to his family. Love you so much. May God bless you, Waheguru</div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">Happy Birthday Navin! 
+        So proud of you and all your accomplishments. Can’t believe you’re 20 already! Time has flown and excited to see where the next few years take you. 
+        Hope you have a great birthday in sunny SoCal!!
+        Love you always.
+        Dad.</div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">Happy Birthday Navin! I hope you have a wonderful day filled with edits of your glorious king and sweet treats. It’s hard to believe lil bro is 20! It’s been great seeing you grow into the passionate, thoughtful man you are, and here’s to another year of growth and happiness. I can’t wait to see where your adventure takes you.
+
+        Love, 
+        Kareena</div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">Happy birthday Navin!! It's finally time for you to be matching with all of us as you enter your twenties. It feels like yesterday that I watched you graduate high school, but now you're going to be halfway through college which is insane. I'm so proud of everything you have accomplished and will continue to accomplish. You're a talented individual with a passion for making your mark and I can't wait to see where you begin. From our constant banter and back and forth to talking about films and books, I wouldn't have ask for anything different from a younger brother. I hope you have an amazing birthday and celebrate big as going into your twenties is ONLY the beginning! 
+
+        Much love, 
+        Anissa (your favorite sister)</div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">“Wishing you have a great day! 20 years old, that’s amazing! Soon you’ll be kicking 30 like me! Have fun and I love you a lot.” - Yaya </div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">From Preeya: Happy Birthday lil bro!!! You are one of the best people I know and I’m so grateful to have you as my brother and one of my people. I hope you have such a good day and remember how loved you are! You are a special and loving person. I hope you are thriving in Cali and I hope I can see you soon. Miss you buddy and love you, you old man 🫣🫶🏾💁🏽‍♀️</div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">happy birthday navin, 40 has finally arrived and it suits you well buddy. Here’s to another year of being a Disney adult and celebrating it in the best way possible… sitting in a scooter for the 3 hour long line at haunted mansion. Thanks for being a great cousin… I look forward to many more fun times in the future pal. Love, Arjun </div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">From Mama Goldi: Navin, you can take the paint on beard off now, you’re old enough.  Happy birthday lad, love you loads and stay the heck away from any guns cause you can’t shoot for shit! </div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">happy birthday dearest Navin.  I feel like it was just yesterday we were celebrating your toddler birthdays and now here we are at your 40th! 😜 lots of love always, Mami Amar </div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message"> Happy bday Navin! Glad I got to hang out with you for a bit when we were at San Francisco, hopefully someday I can have a beard like yours-Tegh </div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message"> hey navin!! listen nav, can I call you nav? nav y’see this new year of adulthood is gonna bring crazy things, probably some challenges and probably some epic rewards too! but just remember with the crazy smart head you have on your shoulders and the really insanely talented and funny family members you have supporting you, you’re gonna be fine and I’m not worried about you one bit :) happy birthday champ. 
+        love kirin :P </div></div>
+    <img src="pictures/IMG_8633.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_0012.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_0766.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_0837.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_1045.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_1115.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_1327.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_1652.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_3416.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_3827.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_4016.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_4145.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_4324.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_4692.PNG" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_5447.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_6282.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_6402.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_7432.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_7793.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_8090.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_8703.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_8718.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_9481.jpeg" alt="Photo 6" class="gallery-img">
+    <img src="pictures/fam_pics/IMG_9706.jpeg" alt="Photo 6" class="gallery-img">
+
+    </div>
+    
+  </div>
+  
+  <!-- FRIENDS SECTION -->
+  <div id="friends" class="container">
+    <!-- 14 friend cards -->
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">From Aidan: dearest navin,
+
+        your spontaneity and dedication to college debauchery has not only improved, but shaped my college experience. your kindness and maturity oftentimes make you the voice of reason in the group which can be incredibly refreshing considering our friends, and those traits always pose a fun challenge when i decide to antagonize the situation. i’m actually just now realizing that im older than you so id be remiss if i didn’t call you lil bro. anyway, keep killing it my treacherous twin ⛓️🩸 </div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">From Aryan: To the man, the myth, the menace in the paint: Happy Birthday, Navin! You’ve survived half of college, yellow sludge roommate trauma, and been an absolute handball beast; honestly, Hall of Fame resume stuff. You’ve got impeccable film taste, killer handball instincts, and the court presence of Dennis Rodman, and I can’t wait to see what the house ends up like this year. May the Bulls surprise you, may the Bears not ruin your Sundays, and may your roommates handle their own bodily fluids. Big love, bro (but, also, next time you get a layup over me, I’m tripping you). </div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">From Sahej: Happy birthday Navin! It’s been so fun getting to know you over the past 2 years. You and I have such similar humors, which makes all the hang outs way more fun (throwback to crying over ant jokes at Layla’s bday dinner). I hope we get to hang out more at bombacrib next year! Have a great one!</div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">Hi Navin, happy birthday! Maybe the milestone of turning 20 itself isn’t a big deal, but know that we’ve seen you grow and learn to be an even more mature and thoughtful person than you already were. There has been many a moment where I’ve looked to your wisdom in specific. It’s been so nice to have known you for the last two years. I’m glad that I have someone in my life that I share an interest in film with and someone who has the best kind of subtle humor (and the loud humor when it’s necessary). So many memorable nights spent with you and the gang… I’m very grateful to be your friend and I hope you know that I don’t take you for granted even a bit. Love you and see you soon!! - Raghav </div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">Happy Birthday, Navin!! Thank you so much for being best friend I could have in high school, highkey would not have made it through mentally if you weren’t around. Glad we’re staying close after it all too :)
+
+        -Alex   </div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">From Suhan: Happy birthday my bearded bretheren. Oh where to start? Lowkey I’ll start at the beginning I remember our first Cobb floor meeting with Reef I was like DAMN what a beard 🤝 I can’t believe the two year ride that has followed and im so eternally grateful for all the memories. So many hijinks and hoodwinks and general tomfoolery- we building generational dad lore. Thankful for your amazingly genuine presence in my life - I feel like we have so much in common n wish I could have known u for my whole life n maybe that u weren’t a Bears fan but I can overlook some things 💔 Your drive, thoughtfulness, and creativity inspires me and I’m excited to see all the amazing things you get up to in the years to come. Johnson soaked asf writing this. Nobody I’d rather go ginger ale for ginger ale with 😭😭💔💔</div></div>
+    <div class="card"><button onclick="toggleMessage(this)">💌</button><div class="message">From Favor: Happy Birthday, Navin. You’re one of the most grounded and genuinely solid people I know, and it’s been real having you as a roommate and a friend. You’ve got a rare mix of good judgment, a strong sense of who you are, and you’re honestly one of the funniest people I know—naturally, without even trying. Wishing you nothing but the best this year: more opportunities, more growth, and moments that remind you just how far you’ve come. Glad to be in your corner as you keep pushing forward. Enjoy the day, man. You deserve it.</div></div>
+
+    <div class="video-card">
+        <button class="reveal-btn" onclick="toggleVideo(this)">💌</button>
+        <div class="video-wrapper">
+          <video controls>
+            <source src="eddy_vid.mov" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      
+      <div class="video-card">
+        <button class="reveal-btn" onclick="toggleVideo(this)">💌</button>
+        <div class="video-wrapper">
+          <video controls>
+            <source src="jackson_vid.mov" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="video-card">
+        <button class="reveal-btn" onclick="toggleVideo(this)">💌</button>
+        <div class="video-wrapper">
+          <video controls>
+            <source src="luke_vid.mov" type="video/mp4">
+          </video>
+        </div>
+      </div>
+  <script>
+    function toggleVideo(button) {
+      const videoWrapper = button.nextElementSibling;
+      videoWrapper.classList.toggle('show');
+    }
+  </script>
+    <img src="pictures/friend_pics/42092BD5-3AA4-4A7F-8D3F-7152A90C7C2E.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/1E7943A6-F5BA-44F6-862C-450A5B56CEC2.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/54310B71-1D56-4B17-AC8F-06EA0A71F4AC.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/8BF1F971-4084-4E33-A75F-C28B3B78A238.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/90E363F5-B397-4127-A010-489941F38152.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/C5B91CCB-6E64-413A-9443-697C785652DC.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/DSC04061.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/EDE16112-034F-4478-97F7-0A4DF03F6EB2.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_0852.JPEG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_0853.JPEG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_0918.JPEG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_1131.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_2325.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_2429.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_2484.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_5607_Original.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_6647.JPEG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_8457.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_8458.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/Screenshot 2025-07-07 at 11.05.20 PM.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_7211.jpg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_7212.jpg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/DSC04053.JPEG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/View recent photos.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/Screenshot 2025-07-07 at 11.29.55 PM.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_7218.jpg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/friend_pics/IMG_4398.jpeg" alt="Photo 1" class="gallery-img">
+    
+
+      </div>
+      
+      
+  </div>
+
+  <!-- NITHI SECTION -->
+  <div id="nithi" class="container">
+    <div class="card" style="width: 100%;max-width: 1200px;">
+    <button onclick="toggleMessage(this)">💌</button>
+    <div class="message">
+        <p style="font-size: 1.1rem;">
+      Happy Birthday Navin! You're finally 20 (no more cougar jokes!!). Even though we've only been dating for 7 months, I feel like we've been in each other's lives since childhood.  I'm so lucky to call you my boyfriend. Dating you has shown me how kind, passionate, caring, and funny (you can be the funnier one today i guess) of a man you are. I never anticipated that transferring to UNC would lead me to find my best friend and boyfriend all in one person. I cherish all of the memories we have created together and am so grateful to have the opportunity to create more with you. Here's to another year of watching movies and TV together, trying new restaurant (and sweet treats), talking about books we're reading, sending each other 50 reels a day, and more. I love you so much and I hope you have the best day ever. Get a little sweet treat for me ;)
+      </p>
+      </div>
+    </div>
+    <div class="nithi-gallery">
+    <img src="pictures/nithi_pics/IMG_0718.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5420.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5435.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5771.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5836.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5931.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_6007.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5987.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/RenderedImage.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_4819.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_4825.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5047.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5109.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5142.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5156.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5268.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5269.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_5336.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_7139.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_1094.JPG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_7064.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/FullSizeRender.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/DSC03977.JPEG" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_4728.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_7213.jpg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_4093.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/FullSizeRender 2.jpeg" alt="Photo 1" class="gallery-img">
+    <img src="pictures/nithi_pics/IMG_4717.jpeg" alt="Photo 1" class="gallery-img">
+    </div>
+  </div>
+
+  <script>
+    function showPage(id) {
+      document.querySelectorAll('.container').forEach(container => {
+        container.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function toggleMessage(btn) {
+      const msg = btn.nextElementSibling;
+      msg.style.display = msg.style.display === 'block' ? 'none' : 'block';
+    }
+
+   
+  </script>
+
+</body>
+</html>
+
