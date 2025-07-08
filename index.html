@@ -95,7 +95,7 @@
       }
     }
 
-    #nithi.container {
+    #nithi {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -103,6 +103,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 #nithi .card {
   width: 100%;
   max-width: 1200px;
@@ -455,7 +456,10 @@
       msg.style.display = msg.style.display === 'block' ? 'none' : 'block';
     }
 
-   
+    window.addEventListener('DOMContentLoaded', () => {
+  showPage('home');
+});
+
   </script>
 
 </body>
