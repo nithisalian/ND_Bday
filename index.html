@@ -450,17 +450,22 @@
       });
       document.getElementById(id).style.display = 'flex';
     }
-
+  
     function toggleMessage(btn) {
       const msg = btn.nextElementSibling;
       msg.style.display = msg.style.display === 'block' ? 'none' : 'block';
     }
-
-    window.addEventListener('DOMContentLoaded', () => {
-  showPage('home');
-});
-
   </script>
+  
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.container').forEach(c => c.style.display = 'none');
+      document.getElementById('home').style.display = 'flex';
+    });
+  </script>
+  
+  </body>
+  
 
 </body>
 </html>
